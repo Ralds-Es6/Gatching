@@ -1,0 +1,10 @@
+{
+    "css.customData": [],
+    "css.lint.unknownAtRules": "ignore",
+    "tailwindCSS.includeLanguages": {
+        "plaintext": "javascript",
+        "html": "HTML",
+        "javascript": "javascript",
+        "css": "css"
+    }
+}
