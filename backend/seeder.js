@@ -26,7 +26,8 @@ const createAdmin = async () => {
             username: 'gerald',
             email: 'geraldquinto1011@gmail.com',
             password: 'admin123',
-            role: 'admin'
+            role: 'admin',
+            isVerified: true
         });
 
         const user = await User.create({
@@ -34,7 +35,8 @@ const createAdmin = async () => {
             username: 'user123',
             email: 'user@example.com',
             password: 'user123',
-            role: 'user'
+            role: 'user',
+            isVerified: true
         });
 
         console.log('Accounts created successfully!');

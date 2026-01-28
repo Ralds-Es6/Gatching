@@ -82,6 +82,9 @@ const Login = () => {
                 </form>
 
                 <div className="mt-8 text-center flex flex-col gap-3">
+                    <Link to="/forgot-password" size="sm" className="text-text-muted no-underline hover:text-text-main text-sm transition-colors">
+                        Forgot Password?
+                    </Link>
                     <Link to="/register" className="text-accent no-underline text-sm hover:underline">
                         Don't have an account? Sign up
                     </Link>

@@ -4,6 +4,7 @@ import Home from '../views/Home';
 import Login from '../views/Login';
 import AdminLogin from '../views/AdminLogin';
 import Register from '../views/Register';
+import ForgotPassword from '../views/ForgotPassword';
 import AdminDashboard from '../views/AdminDashboard';
 import UserDashboard from '../views/UserDashboard';
 import Navbar from '../components/Navbar';
@@ -18,6 +19,7 @@ const AppRouter = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route path="/admin" element={<AdminLogin />} />
                 <Route path="/admin/dashboard" element={
                     <AdminRoute>
