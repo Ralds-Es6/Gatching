@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../views/Home';
 import Login from '../views/Login';
 import AdminLogin from '../views/AdminLogin';
+import Register from '../views/Register';
 import AdminDashboard from '../views/AdminDashboard';
 import UserDashboard from '../views/UserDashboard';
 import Navbar from '../components/Navbar';
@@ -16,6 +17,7 @@ const AppRouter = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
                 <Route path="/admin" element={<AdminLogin />} />
                 <Route path="/admin/dashboard" element={
                     <AdminRoute>
