@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import api from '../services/api';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import titleScreen from '../assets/bg/title screen.svg';
 
 const Login = () => {
     const { login: authLogin } = useAuth();
@@ -34,11 +35,17 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-[80vh] flex items-center justify-center p-8">
+        <div className="min-h-[80vh] flex items-center justify-center p-8 relative overflow-hidden">
+            {/* Background with Blur */}
+            <div
+                className="fixed inset-0 w-full h-full bg-cover bg-center bg-no-repeat blur-[6px] -z-10 scale-110"
+                style={{ backgroundImage: `url("${titleScreen}")` }}
+            ></div>
+
             <div className="card glass w-full max-w-[450px] !p-12 !rounded-[24px] shadow-card">
                 <div className="text-center mb-10">
                     <h2 className="text-[2rem] font-extrabold mb-2 text-text-main">Welcome Back</h2>
-                    <p className="text-text-muted">Login to your Gatcha Store account</p>
+                    <p className="text-text-muted">Login to your Astral World account</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">

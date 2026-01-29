@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import api from '../services/api';
 import { Link, useNavigate } from 'react-router-dom';
+import titleScreen from '../assets/bg/title screen.svg';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -72,7 +73,13 @@ const Register = () => {
     };
 
     return (
-        <div className="min-h-[80vh] flex items-center justify-center p-8">
+        <div className="min-h-[80vh] flex items-center justify-center p-8 relative overflow-hidden">
+            {/* Background with Blur */}
+            <div
+                className="fixed inset-0 w-full h-full bg-cover bg-center bg-no-repeat blur-[6px] -z-10 scale-110"
+                style={{ backgroundImage: `url("${titleScreen}")` }}
+            ></div>
+
             <div className="card glass w-full max-w-[500px] !p-10 !rounded-[24px] shadow-card relative overflow-hidden">
                 {/* Progress Bar */}
                 <div className="absolute top-0 left-0 w-full h-1.5 bg-white/5">
@@ -87,7 +94,7 @@ const Register = () => {
                     <div className="animate-fadeIn">
                         <div className="text-center mb-8">
                             <h2 className="text-[2rem] font-extrabold mb-2 text-text-main">Create Account</h2>
-                            <p className="text-text-muted">Join Gatching today</p>
+                            <p className="text-text-muted">Join Astral World today</p>
                         </div>
 
                         <form onSubmit={handleRegisterSubmit} className="flex flex-col gap-4">

@@ -20,10 +20,12 @@ app.use(cors());
 // Route files
 const userRoutes = require('./routes/userRoutes');
 const authRoutes = require('./routes/authRoutes');
+const gachaRoutes = require('./routes/gachaRoutes');
 
 // Mount routers
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/gacha', gachaRoutes);
 
 const PORT = process.env.PORT || 5000;
 

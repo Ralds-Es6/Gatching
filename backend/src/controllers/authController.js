@@ -47,7 +47,7 @@ exports.register = async (req, res) => {
                 subject: 'Account Verification OTP',
                 html: `
                     <div style="font-family: Arial, sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
-                        <h2 style="color: #333;">Welcome to Gatching!</h2>
+                        <h2 style="color: #333;">Welcome to Astral World!</h2>
                         <p>Thank you for registering. Please use the following OTP to verify your account:</p>
                         <h1 style="color: #4A90E2; letter-spacing: 5px; text-align: center;">${otp}</h1>
                         <p>This OTP will expire in 10 minutes.</p>
@@ -248,7 +248,10 @@ exports.login = async (req, res) => {
         res.status(200).json({
             success: true,
             role: user.role,
-            name: user.name
+            name: user.name,
+            username: user.username,
+            email: user.email,
+            id: user._id
         });
     } catch (err) {
         console.error(err);

@@ -8,12 +8,14 @@ import ForgotPassword from '../views/ForgotPassword';
 import AdminDashboard from '../views/AdminDashboard';
 import UserDashboard from '../views/UserDashboard';
 import Navbar from '../components/Navbar';
+import BackgroundMusic from '../components/BackgroundMusic';
 import ProtectedRoute from '../components/ProtectedRoute';
 import AdminRoute from '../components/AdminRoute';
 
 const AppRouter = () => {
     return (
         <Router>
+            <BackgroundMusic />
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -34,7 +36,7 @@ const AppRouter = () => {
                 {/* Add more routes here */}
             </Routes>
             <footer className="mt-auto py-16 border-t border-white/10 text-center">
-                <p className="text-text-muted">&copy; 2026 Gatching Boilerplate. Built for excellence.</p>
+                <p className="text-text-muted">&copy; 2026 HaneulzPH</p>
             </footer>
         </Router>
     );

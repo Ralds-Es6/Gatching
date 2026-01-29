@@ -37,6 +37,16 @@ const UserSchema = new mongoose.Schema({
     },
     otp: String,
     otpExpire: Date,
+    inventory: [
+        {
+            imageName: String,
+            pool: String, // 'hannyangi' or 'jaeguri'
+            obtainedAt: {
+                type: Date,
+                default: Date.now
+            }
+        }
+    ],
     createdAt: {
         type: Date,
         default: Date.now
