@@ -95,9 +95,6 @@ const Login = () => {
                     <Link to="/register" className="text-accent no-underline text-sm hover:underline">
                         Don't have an account? Sign up
                     </Link>
-                    <Link to="/admin" className="text-text-muted no-underline text-xs hover:text-text-main transition-colors">
-                        Are you an admin? Login here
-                    </Link>
                 </div>
             </div>
         </div>
